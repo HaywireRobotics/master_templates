@@ -25,7 +25,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 import frc.robot.util.Statics;
 
-public class Camera {
+public class AprilTagLimelight {
     public PhotonCamera camera;
 
     private double[] tagConfidence = new double[Constants.aprilTags.length];
@@ -56,7 +56,7 @@ public class Camera {
     private IntegerPublisher numTagsPublisher;
     private DoubleArrayPublisher estimatedPosePublisher;
 
-    public Camera(NetworkTableInstance nt, String name, Pose3d cameraMountPose) {
+    public AprilTagLimelight(NetworkTableInstance nt, String name, Pose3d cameraMountPose) {
         camera = new PhotonCamera(name);
         this.cameraMountPose = cameraMountPose;
         timer.start();
